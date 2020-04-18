@@ -22,15 +22,15 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    # Build helper
+    - name: Build ptylib
+      run: |
+        cd helper
+        make
+        
     # Restore packages
     - name: Restore
       run: msbuild /t:restore
-
-    # Build helper
-    - name: Build ptylib
-      run:
-        cd helper
-        make
 
     # Build
     - name: Build
