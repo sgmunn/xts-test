@@ -36,3 +36,7 @@ jobs:
     # Build
     - name: Build
       run: msbuild /t:build
+
+    # Test
+    - name: Test
+      run: dotnet test
