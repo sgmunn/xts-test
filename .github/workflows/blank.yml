@@ -26,7 +26,8 @@ jobs:
     - name: Build ptylib
       run: |
         cd helper
-        make
+        pwd
+        cc -shared pty.c -shared -o libpty.dylib
         
     # Restore packages
     - name: Restore
