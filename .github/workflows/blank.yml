@@ -39,4 +39,4 @@ jobs:
 
     # Test
     - name: Test
-      run: dotnet test
+      run: dotnet test Tests/Tests.csproj
